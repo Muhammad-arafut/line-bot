@@ -128,10 +128,8 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
-				'type1' => 'text1',
-				'text1' => $text,
-				'type2' => 'text2',
-				'text2' => 'text',
+				'type' => 'text',
+				'text' => "id : " . $text,
 				
 			];
 
