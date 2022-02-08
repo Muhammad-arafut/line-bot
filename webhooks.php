@@ -16,12 +16,12 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 // $bot->pushMessage($idPush, $textMessageBuilder);
 // $bot->pushMessage($idPush, $imageMessageBuilder);
 
-// use Monolog\Logger;
-// use Monolog\Handler\StreamHandler;
-// use Monolog\Handler\FirePHPHandler;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Monolog\Handler\FirePHPHandler;
 
-// $logger = new Logger('LineBot');
-// $logger->pushHandler(new StreamHandler('php://stderr', Logger::DEBUG));
+$logger = new Logger('LineBot');
+$logger->pushHandler(new StreamHandler('php://stderr', Logger::DEBUG));
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($_ENV["LINEBOT_ACCESS_TOKEN"]);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $_ENV["LINEBOT_CHANNEL_SECRET"]]);
