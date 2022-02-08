@@ -129,7 +129,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => "id : " . $text,
+				'text' => "user id ของท่านคือ : " . $text,
 				
 			];
 
