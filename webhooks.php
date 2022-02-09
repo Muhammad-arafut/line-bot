@@ -17,21 +17,21 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 				if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 					// Get text sent
 					$text = $event['message']['text'];
-					if($text == "text"){
-					$text = $event['message']['text'];
+					if($text == "hi"){
 					$messages = [
 						'type' => 'text',
 						'text' => $text
 					];
+						
 					}else{
-					$text = $event['source']['userId'];
+					$userid = $event['source']['userId'];
 // 					Get replyToken
 					$replyToken = $event['replyToken'];
 
 					// Build message to reply back
 					$messages = [
 						'type' => 'text',
-						'text' => $text
+						'text' => $userid
 					];
 					}
 // 					$text = $event['source']['userId'];
