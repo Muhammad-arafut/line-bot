@@ -123,8 +123,9 @@ if (!is_null($events['events'])) {
 		
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			$text = $event['message']['text'];
-			if($text == 'text'){
-				$userid = $event['source']['userId'];
+			$reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
+			
+			$userid = $event['source']['userId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -135,7 +136,6 @@ if (!is_null($events['events'])) {
 				'text' => "user id ของท่านคือ : " . $userid .,	
 			];
 			// Get text sent
-			}
 			
 			
 			
