@@ -34,7 +34,7 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 					}else{
 						$messages = [
 						'type' => 'text',
-						'text' => $text
+						'text' => 'สวัสดี หากท่านต้องการ User ID พิมพ์ Yes'
 						];
 					}
 							
