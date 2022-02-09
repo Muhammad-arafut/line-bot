@@ -16,6 +16,7 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 				// Reply only when message sent is in 'text' format
 				if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 					// Get text sent
+					$replyToken = $event['replyToken'];
 					$text = $event['message']['text'];
 					if($text == "hi"){
 					$messages = [
@@ -36,7 +37,7 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 					}
 // 					$text = $event['source']['userId'];
 					// Get replyToken
-// 					$replyToken = $event['replyToken'];
+// 					
 
 // 					// Build message to reply back
 // 					$messages = [
