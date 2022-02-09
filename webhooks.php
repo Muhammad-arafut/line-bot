@@ -18,6 +18,7 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 					// Get text sent
 					$text = $event['message']['text'];
 					if($text == "text"){
+					$text = $event['message']['text'];
 					$messages = [
 						'type' => 'text',
 						'text' => $text
