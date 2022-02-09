@@ -21,21 +21,21 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 					// Get text sent
 					$text = $event['message']['text'];
 					$userid = $event['source']['userId'];
-					if($text == "Yes"){
-						$messages = [
-						'type' => 'text',
-						'text' => $userid
-						];
-					}else if($text == "No"){
-						$messages = [
-						'type' => 'text',
-						'text' => 'ขอบคุณที่ใช้บริการ'
-					];
-					}else{
+// 					if($text == "Yes"){
+// 						$messages = [
+// 						'type' => 'text',
+// 						'text' => $userid
+// 						];
+// 					}else if($text == "No"){
+// 						$messages = [
+// 						'type' => 'text',
+// 						'text' => 'ขอบคุณที่ใช้บริการ'
+// 					];
+// 					}else{
 						$messages = [
 						'type' => 'text',
 						'text' => $text
-					}
+// 					}
 							
 					// Make a POST Request to Messaging API to reply to sender
 					$url = 'https://api.line.me/v2/bot/message/reply';
