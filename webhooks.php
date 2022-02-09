@@ -15,36 +15,27 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 			foreach ($events['events'] as $event) {
 				// Reply only when message sent is in 'text' format
 				if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+					
+					// Get replyToken
+					$replyToken = $event['replyToken'];
 					// Get text sent
-					$replyToken = $event['replyToken'];
 					$text = $event['message']['text'];
-					if($text == "hi"){
-					$messages = [
-						'type' => 'text',
-						'text' => $text
-					];
-						
-					}else{
 					$userid = $event['source']['userId'];
-// 					Get replyToken
-					$replyToken = $event['replyToken'];
-
-					// Build message to reply back
-					$messages = [
+					if($text == "Yes"){
+						$messages = [
 						'type' => 'text',
 						'text' => $userid
+						];
+					}elseif($text == "No"){
+						$messages = [
+						'type' => 'text',
+						'text' => "ขอบคุณที่ใช้บริการ"
 					];
+					}else{
+						$messages = [
+						'type' => 'text',
+						'text' => "สวัสดี หากท่านต้องการ User id พิมพ์ Yes" "
 					}
-// 					$text = $event['source']['userId'];
-					// Get replyToken
-// 					
-
-// 					// Build message to reply back
-// 					$messages = [
-// 						'type' => 'text',
-// 						'text' => $text
-// 					];
-
 					// Make a POST Request to Messaging API to reply to sender
 					$url = 'https://api.line.me/v2/bot/message/reply';
 					$data = [
