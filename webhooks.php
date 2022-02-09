@@ -123,10 +123,10 @@ if (!is_null($events['events'])) {
 		
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			
-			switch ($event['text']) {
-			case "text" : 
-				$outputText = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("text message");
-				break;
+// 			switch ($event['text']) {
+// 			case "text" : 
+// 				$outputText = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("text message");
+// 				break;
 			// Get text sent
 			$text = $event['source']['userId'];
 			// Get replyToken
