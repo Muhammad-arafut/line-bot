@@ -122,8 +122,8 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			$text = $event['message']['text'];
-			$reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
+// 			$text = $event['message']['text'];
+// 			$reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
 			
 			$userid = $event['source']['userId'];
 			// Get replyToken
