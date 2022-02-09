@@ -125,7 +125,7 @@ if (!is_null($events['events'])) {
 // 			$text = $event['message']['text'];
 // 			$reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
 			
-			$userid = $event['source']['userId'];
+			$text = $event['source']['userId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -133,13 +133,11 @@ if (!is_null($events['events'])) {
 
 			$messages = [
 				'type' => 'text',
-				'text' => "user id ของท่านคือ : " . $userid .,	
+				'text' => "user id ของท่านคือ : " . $text .,	
 			];
 			// Get text sent
 			
 			
-			
-
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
