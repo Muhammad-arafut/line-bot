@@ -22,6 +22,16 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 						'type' => 'text',
 						'text' => $text
 					];
+					}else{
+					$text = $event['source']['userId'];
+// 					Get replyToken
+					$replyToken = $event['replyToken'];
+
+					// Build message to reply back
+					$messages = [
+						'type' => 'text',
+						'text' => $text
+					];
 					}
 // 					$text = $event['source']['userId'];
 					// Get replyToken
