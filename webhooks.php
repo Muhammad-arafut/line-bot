@@ -17,7 +17,7 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 				if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 					// Get text sent
 					$text = $event['message']['text'];
-					if($text == 'text'){
+					if($text == "text"){
 					$messages = [
 						'type' => 'text',
 						'text' => $text
