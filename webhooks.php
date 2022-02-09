@@ -26,16 +26,17 @@ $access_token = 'HWo5n9a0MDh5XLLNjHjpvI5qgG0/bCO2wUx92DagXo1TqCiMchGXbuTP0bLwd4N
 						'type' => 'text',
 						'text' => $userid
 						];
-					}elseif($text == "No"){
+					}else if($text == "No"){
 						$messages = [
 						'type' => 'text',
-						'text' => "ขอบคุณที่ใช้บริการ"
+						'text' => 'ขอบคุณที่ใช้บริการ'
 					];
 					}else{
 						$messages = [
 						'type' => 'text',
-						'text' => "สวัสดี หากท่านต้องการ User id พิมพ์ Yes"
+						'text' => 'สวัสดี หากท่านต้องการ User id พิมพ์ Yes'
 					}
+							
 					// Make a POST Request to Messaging API to reply to sender
 					$url = 'https://api.line.me/v2/bot/message/reply';
 					$data = [
