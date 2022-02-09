@@ -125,7 +125,10 @@ if (!is_null($events['events'])) {
 			$messageText=strtolower(trim($event->getText()));
 			switch ($messageText) {
 			case "text" : 
-				$outputText = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("text message");
+				$messages = [
+				'type' => 'text',
+				'text' => "user id ของท่านคือ : " . $text,	
+			];
 				break;
 			// Get text sent
 			$text = $event['source']['userId'];
